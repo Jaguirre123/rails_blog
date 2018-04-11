@@ -1,0 +1,23 @@
+
+<h1>Blogio</h1>
+
+<%= link_to "New Post", posts_new_path %>
+<center>
+    <h2>All Posts</h2>
+</center>
+<table class="table">
+    <tbody>
+    <tr>
+        <th>Post Title</th>
+        <th>Upvotes</th>
+        <th>Date Published</th>
+    </tr>
+    <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.title %></td>
+            <td><%= post.upvotes %></td>
+            <td><%= post.created_at %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
